@@ -432,7 +432,20 @@
     inset: 8px;
     border: 1px dashed var(--ink-faint);
     pointer-events: none;
-  }
+  } 
+  .survey-frame--live {
+  padding: clamp(20px, 3vh, 32px) clamp(12px, 2vw, 24px);
+  text-align: left;
+}
+.survey-frame--live::before {
+  display: none;
+}
+.survey-frame--live iframe {
+  background: transparent;
+  width: 100%;
+  border: 0;
+  display: block;
+}
   .survey-placeholder-label {
     font-family: 'JetBrains Mono', monospace;
     font-size: 11px;
@@ -753,15 +766,11 @@
       <p class="meta">8 questions.<br>About 3 minutes.</p>
     </div>
 
-    <div class="survey-frame">
-      <div class="survey-placeholder-label">Embed survey here</div>
-      <h4 class="survey-placeholder-h">Help shape the 4th Annual<br>CED Summit × BWS Fest.</h4>
-      <p class="survey-placeholder-p">
-        Your voice shapes the conversations, the programming, and the work we do together this August. Survey closes June 1, 2026.
-      </p>
-      <a href="#" class="survey-cta">Take the Survey →</a>
-      <div class="survey-time">≈ 3 minutes · Mobile-friendly</div>
-    </div>
+    <div class="survey-frame survey-frame--live">
+  <iframe data-tally-src="https://tally.so/embed/<iframe data-tally-src="https://tally.so/embed/68rjZo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="2448" frameborder="0" marginheight="0" marginwidth="0" title="4th Annual CED Summit × BWS Fest — Community Survey"></iframe>
+<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0" title="CED Summit Community Survey"></iframe>
+  <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s)}</script>
+</div>
   </section>
 
   <!-- MARQUEE -->

@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>4th Annual CED Summit × BWS Fest · Aug 13, 2026 · New Haven, CT</title>
+<meta name="description" content="The 4th Annual Community Economic Development Summit, presented by Communities for Generations, in partnership with the 5th Annual Black Wall Street Festival. Thursday, August 13, 2026. New Haven, CT.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,wght@0,400;0,500;0,600;0,800;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bone: #F4EFE6;
+    --bone-deep: #EAE3D5;
+    --bone-deeper: #DDD3BE;
+    --ink: #14110F;
+    --ink-soft: #2A2522;
+    --ink-faint: #6B5F54;
+    --rust: #D2461E;
+    --rust-deep: #A8351A;
+    --grid: rgba(20, 17, 15, 0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bone);
+    color: var(--ink);
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Visible framework grid */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, var(--grid) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  /* Grain overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.18'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: multiply;
+    opacity: 0.4;
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 2;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 36px clamp(20px, 4vw, 56px);
+  }
+
+  /* ========== HEADER STRIP ========== */
+  .strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 16px;
+    margin-bottom: clamp(36px, 6vh, 64px);
+  }
+  .strip .left { display: flex; gap: 24px; flex-wrap: wrap; }
+  .strip .right { display: flex; gap: 18px; align-items: center; }
+  .strip .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--rust);
+    display: inline-block;
+    margin-right: 8px;
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+  }
+
+  /* ========== PRESENTED BY MASTHEAD ========== */
+  .presented {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: clamp(20px, 3vw, 36px);
+    align-items: center;
+    padding-bottom: clamp(28px, 4vh, 40px);
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: clamp(40px, 6vh, 72px);
+  }
+
+  .presented-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-faint);
+    line-height: 1.6;
+    writing-mode: horizontal-tb;
+    max-width: 100px;
+  }
+  .presented-label strong {
+    display: block;
+    color: var(--ink);
+    font-weight: 700;
+    margin-top: 4px;
+  }
+
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: clamp(18px, 3vw, 36px);
+    flex-wrap: wrap;
+  }
+  .logo-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: clamp(54px, 7vw, 72px);
+    background: var(--ink);
+    padding: 8px 14px;
+    border-radius: 2px;
+    flex: 0 0 auto;
+  }
+  .logo-cell img {
+    height: 100%;
+    width: auto;
+    max-width: clamp(110px, 14vw, 160px);
+    object-fit: contain;
+    display: block;
+  }
+  .logo-x {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(20px, 2.4vw, 28px);
+    color: var(--rust);
+    line-height: 1;
+    flex: 0 0 auto;
+  }
+
+  @media (max-width: 640px) {
+    .presented { grid-template-columns: 1fr; gap: 16px; }
+    .presented-label { max-width: none; }
+    .logo-row { gap: 14px; }
+    .logo-cell { height: 48px; padding: 6px 10px; }
+  }
+
+  /* ========== HERO ========== */
+  .hero {
+    position: relative;
+    margin-bottom: clamp(48px, 8vh, 96px);
+  }
+
+  .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--rust);
+    margin-bottom: 28px;
+    display: inline-block;
+    border-left: 3px solid var(--rust);
+    padding-left: 12px;
+    line-height: 1.3;
+  }
+
+  .title {
+    font-family: 'Anton', 'Impact', sans-serif;
+    font-weight: 400;
+    font-size: clamp(54px, 11vw, 168px);
+    line-height: 0.88;
+    letter-spacing: -0.015em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 18px;
+  }
+  .title .row1 { display: block; }
+  .title .row2 {
+    display: block;
+    color: var(--rust);
+    margin-left: clamp(16px, 5vw, 64px);
+  }
+  .title .row3 {
+    display: block;
+    -webkit-text-stroke: 2px var(--ink);
+    color: transparent;
+    margin-left: clamp(40px, 11vw, 140px);
+  }
+  .title .amp {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ink-soft);
+    -webkit-text-stroke: 0;
+    font-size: 0.7em;
+    margin: 0 0.05em;
+    vertical-align: 0.05em;
+  }
+
+  .subtitle {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(17px, 2.1vw, 26px);
+    line-height: 1.4;
+    margin-top: clamp(20px, 3vh, 36px);
+    max-width: 760px;
+    color: var(--ink-soft);
+  }
+  .subtitle em {
+    font-style: normal;
+    font-weight: 800;
+    color: var(--ink);
+    border-bottom: 2px solid var(--rust);
+    padding-bottom: 2px;
+  }
+
+  /* ========== DETAILS BLOCK ========== */
+  .details {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 28px;
+    margin-bottom: clamp(56px, 9vh, 110px);
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: clamp(32px, 5vh, 56px) 0;
+  }
+  .detail { grid-column: span 6; }
+  @media (min-width: 900px) {
+    .detail { grid-column: span 3; }
+  }
+  .detail .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    color: var(--rust);
+    letter-spacing: 0.2em;
+    margin-bottom: 12px;
+    display: block;
+  }
+  .detail .key {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+    margin-bottom: 14px;
+  }
+  .detail .val {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(26px, 3.4vw, 42px);
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  .detail .val .sm {
+    display: block;
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    font-style: italic;
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0;
+    color: var(--ink-soft);
+    margin-top: 8px;
+    line-height: 1.4;
+  }
+
+  /* ========== INVITATION COPY (above survey) ========== */
+  .invitation {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 28px;
+    margin-bottom: clamp(40px, 6vh, 72px);
+    align-items: start;
+  }
+
+  .inv-label {
+    grid-column: span 12;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-soft);
+    margin-bottom: 12px;
+  }
+  .inv-label .swatch {
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--rust);
+    vertical-align: middle;
+    margin-right: 12px;
+  }
+
+  .inv-headline {
+    grid-column: span 12;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(36px, 5.5vw, 76px);
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: clamp(28px, 4vh, 44px);
+  }
+  .inv-headline .accent { color: var(--rust); }
+
+  .inv-body {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(20px, 3vh, 28px);
+    max-width: 820px;
+  }
+  @media (min-width: 900px) {
+    .inv-body { grid-column: 1 / span 10; }
+  }
+
+  .inv-body p {
+    font-family: 'Fraunces', serif;
+    font-size: clamp(17px, 1.5vw, 21px);
+    line-height: 1.55;
+    color: var(--ink);
+  }
+  .inv-body p .lead {
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .inv-body p .em {
+    font-weight: 800;
+    border-bottom: 2px solid var(--rust);
+    padding-bottom: 1px;
+  }
+  .inv-body p .num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.92em;
+    font-weight: 700;
+    background: var(--ink);
+    color: var(--bone);
+    padding: 2px 8px;
+    border-radius: 2px;
+    letter-spacing: 0.05em;
+  }
+  .inv-deadline {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--rust);
+    font-weight: 700;
+    margin-top: 8px;
+  }
+  .inv-deadline::before {
+    content: '↓ ';
+    margin-right: 4px;
+  }
+
+  /* ========== SURVEY ANCHOR ========== */
+  .survey-anchor {
+    border-top: 1px solid var(--ink);
+    padding-top: clamp(36px, 5vh, 56px);
+    margin-bottom: clamp(48px, 7vh, 80px);
+  }
+
+  .survey-head {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 28px;
+    margin-bottom: clamp(28px, 4vh, 40px);
+  }
+
+  .survey-head .lab {
+    grid-column: span 12;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--rust);
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+
+  .survey-head .h {
+    grid-column: span 12;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(32px, 4.6vw, 60px);
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+  @media (min-width: 760px) {
+    .survey-head .h { grid-column: span 8; }
+  }
+
+  .survey-head .meta {
+    grid-column: span 12;
+    font-family: 'Fraunces', serif;
+    font-size: 16px;
+    font-style: italic;
+    color: var(--ink-soft);
+    line-height: 1.4;
+    align-self: end;
+  }
+  @media (min-width: 760px) {
+    .survey-head .meta { grid-column: span 4; text-align: right; }
+  }
+
+  .survey-frame {
+    background: var(--bone-deep);
+    border: 1px solid var(--ink);
+    padding: clamp(40px, 6vh, 64px) clamp(24px, 4vw, 48px);
+    text-align: center;
+    position: relative;
+  }
+  .survey-frame::before {
+    content: '';
+    position: absolute;
+    inset: 8px;
+    border: 1px dashed var(--ink-faint);
+    pointer-events: none;
+  }
+  .survey-placeholder-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-faint);
+    margin-bottom: 20px;
+  }
+  .survey-placeholder-h {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(24px, 3vw, 34px);
+    line-height: 1.05;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    color: var(--ink);
+  }
+  .survey-placeholder-p {
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: var(--ink-soft);
+    max-width: 520px;
+    margin: 0 auto 24px;
+    line-height: 1.5;
+  }
+  .survey-cta {
+    display: inline-block;
+    padding: 18px 32px;
+    background: var(--rust);
+    color: var(--bone);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    text-decoration: none;
+    border: 2px solid var(--rust);
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  .survey-cta:hover {
+    background: var(--ink);
+    border-color: var(--ink);
+  }
+  .survey-time {
+    margin-top: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-faint);
+  }
+
+  /* ========== MARQUEE ========== */
+  .marquee {
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 22px 0;
+    overflow: hidden;
+    margin-bottom: clamp(40px, 6vh, 80px);
+    background: var(--ink);
+    color: var(--bone);
+  }
+  .marquee-track {
+    display: flex;
+    gap: 60px;
+    white-space: nowrap;
+    animation: scroll 50s linear infinite;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(26px, 3.6vw, 44px);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+  .marquee-track span { display: inline-block; }
+  .marquee-track .accent { color: var(--rust); }
+  .marquee-track .star { color: var(--rust); margin: 0 12px; }
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* ========== PARTNERSHIP ========== */
+  .partners {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 28px;
+    margin-bottom: clamp(40px, 6vh, 80px);
+    padding: clamp(28px, 4vh, 44px) 0;
+  }
+  .partners .lab {
+    grid-column: span 12;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-soft);
+    margin-bottom: 8px;
+  }
+  @media (min-width: 760px) { .partners .lab { grid-column: span 4; } }
+
+  .partners .list {
+    grid-column: span 12;
+    font-family: 'Fraunces', serif;
+    font-size: clamp(17px, 2vw, 24px);
+    line-height: 1.45;
+    color: var(--ink);
+  }
+  @media (min-width: 760px) { .partners .list { grid-column: span 8; } }
+
+  .partners .list strong {
+    font-weight: 800;
+    border-bottom: 2px solid var(--rust);
+  }
+
+  /* ========== CTA ========== */
+  .cta {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 28px;
+    align-items: end;
+    padding-top: clamp(36px, 5vh, 56px);
+    padding-bottom: clamp(36px, 5vh, 56px);
+    border-top: 1px solid var(--ink);
+  }
+  .cta-text { grid-column: span 12; }
+  @media (min-width: 760px) { .cta-text { grid-column: span 7; } }
+  .cta-text h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(32px, 5vw, 60px);
+    line-height: 0.98;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+  .cta-text p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-soft);
+    max-width: 480px;
+    line-height: 1.5;
+  }
+  .cta-action {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  @media (min-width: 760px) { .cta-action { grid-column: span 5; align-items: flex-end; } }
+
+  .btn {
+    display: inline-block;
+    padding: 16px 28px;
+    background: var(--rust);
+    color: var(--bone);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    text-decoration: none;
+    border: 2px solid var(--rust);
+    transition: all 0.2s ease;
+    cursor: pointer;
+  }
+  .btn:hover {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--bone);
+  }
+  .btn-ghost { background: transparent; color: var(--ink); border: 2px solid var(--ink); }
+  .btn-ghost:hover { background: var(--ink); color: var(--bone); }
+
+  /* ========== FOOT ========== */
+  .foot {
+    border-top: 1px solid var(--ink);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+  }
+
+  /* Stagger reveal */
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal { animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .d1 { animation-delay: 0.05s; }
+  .d2 { animation-delay: 0.18s; }
+  .d3 { animation-delay: 0.32s; }
+  .d4 { animation-delay: 0.46s; }
+  .d5 { animation-delay: 0.6s; }
+  .d6 { animation-delay: 0.72s; }
+
+  @media (max-width: 600px) {
+    .strip .left .hide-sm { display: none; }
+    .marquee-track { gap: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- HEADER STRIP -->
+  <div class="strip reveal d1">
+    <div class="left">
+      <span><span class="dot"></span>Save the Date</span>
+      <span class="hide-sm">Thursday · August 13 · 2026</span>
+    </div>
+    <div class="right">
+      <span>New Haven, CT</span>
+    </div>
+  </div>
+
+  <!-- PRESENTED BY MASTHEAD -->
+  <div class="presented reveal d2">
+    <div class="presented-label">
+      Presented by
+      <strong>CFG Inc.</strong>
+      In partnership with
+      <strong>BWS Fest</strong>
+    </div>
+    <div class="logo-row">
+      <div class="logo-cell" title="Communities for Generations">
+        <img src="assets/cfg-logo.png" alt="Communities for Generations">
+      </div>
+      <div class="logo-cell" title="The Elements of Abundance">
+        <img src="assets/elements-logo.png" alt="The Elements of Abundance">
+      </div>
+      <span class="logo-x">×</span>
+      <div class="logo-cell" title="Black Wall Street Festival">
+        <img src="assets/bws-logo.png" alt="Black Wall Street Festival">
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="label reveal d2">4th Annual Community<br>Economic Development Summit</span>
+
+    <h1 class="title">
+      <span class="row1 reveal d3">CED Summit</span>
+      <span class="row2 reveal d4">2026</span>
+      <span class="row3 reveal d5">New Haven</span>
+    </h1>
+
+    <p class="subtitle reveal d6">
+      Last August we packed the theater. This year we come back <em>bigger</em>, alongside the 5th Annual Black Wall Street Festival — and this time, the work doesn't end when the room clears.
+    </p>
+  </section>
+
+  <!-- DETAILS -->
+  <section class="details">
+    <div class="detail">
+      <span class="num">01 / Date</span>
+      <div class="val">
+        Aug 13<br>2026
+        <span class="sm">Thursday evening</span>
+      </div>
+    </div>
+
+    <div class="detail">
+      <span class="num">02 / Venue</span>
+      <div class="val">
+        New<br>Haven
+        <span class="sm">Venue announcement coming soon</span>
+      </div>
+    </div>
+
+    <div class="detail">
+      <span class="num">03 / Format</span>
+      <div class="val">
+        4 hr.<br>Summit
+        <span class="sm">Evening program · Dinner served</span>
+      </div>
+    </div>
+
+    <div class="detail">
+      <span class="num">04 / Open To</span>
+      <div class="val">
+        All<br>Welcome
+        <span class="sm">Intergenerational. Community-led.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVITATION + LEAD COPY -->
+  <section class="invitation">
+    <div class="inv-label">
+      <span class="swatch"></span>An Invitation
+    </div>
+
+    <h2 class="inv-headline">
+      Help shape what <span class="accent">we build</span> together.
+    </h2>
+
+    <div class="inv-body">
+      <p>
+        Last August, we packed the theater. More than <span class="num">175</span> of us came together for the 3rd Annual Community Economic Development Summit. We talked about wealth, identity, and power. We named the audacity it takes to build what our community deserves. The room reached capacity, the conversations went past the closing remarks, and the work didn't stop when we cleared the seats.
+      </p>
+      <p>
+        This year — Thursday, August 13, 2026 — we come back. Alongside the <span class="em">5th Annual Black Wall Street Festival</span>, the largest Black-owned festival in Connecticut. With deeper conversations, sharper programming, and a community ready to shape what comes next.
+      </p>
+      <p>
+        But before we curate the experience, we want to hear from you. Three minutes will help shape the conversations, the programming, and the work we do together this August.
+      </p>
+      <p class="inv-deadline">
+        Take the community survey · Closes June 1
+      </p>
+    </div>
+  </section>
+
+  <!-- SURVEY ANCHOR -->
+  <section class="survey-anchor" id="survey">
+    <div class="survey-head">
+      <span class="lab">Community Survey</span>
+      <h3 class="h">Tell us what to build.</h3>
+      <p class="meta">8 questions.<br>About 3 minutes.</p>
+    </div>
+
+    <div class="survey-frame">
+      <div class="survey-placeholder-label">Embed survey here</div>
+      <h4 class="survey-placeholder-h">Help shape the 4th Annual<br>CED Summit × BWS Fest.</h4>
+      <p class="survey-placeholder-p">
+        Your voice shapes the conversations, the programming, and the work we do together this August. Survey closes June 1, 2026.
+      </p>
+      <a href="#" class="survey-cta">Take the Survey →</a>
+      <div class="survey-time">≈ 3 minutes · Mobile-friendly</div>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>4th Annual CED Summit</span><span class="star">✦</span>
+      <span class="accent">× BWS Fest</span><span class="star">✦</span>
+      <span>August 13 · 2026</span><span class="star">✦</span>
+      <span class="accent">New Haven</span><span class="star">✦</span>
+      <span>All Welcome</span><span class="star">✦</span>
+      <span class="accent">Save the Date</span><span class="star">✦</span>
+      <span>4th Annual CED Summit</span><span class="star">✦</span>
+      <span class="accent">× BWS Fest</span><span class="star">✦</span>
+      <span>August 13 · 2026</span><span class="star">✦</span>
+      <span class="accent">New Haven</span><span class="star">✦</span>
+    </div>
+  </div>
+
+  <!-- PARTNERSHIP -->
+  <section class="partners">
+    <div class="lab">Presented in partnership</div>
+    <div class="list">
+      <strong>Communities for Generations, Inc.</strong> · <strong>The Elements of Abundance</strong> · <strong>Black Wall Street Festival</strong> — together for the second year, building civic infrastructure for our community's reemergence.
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta-text">
+      <h3>Stay<br>Connected.</h3>
+      <p>Sponsorship inquiries, speaker proposals, and registration details rolling out as the program takes shape. Be the first to know.</p>
+    </div>
+    <div class="cta-action">
+      <a href="#survey" class="btn">Shape the Summit →</a>
+      <a href="mailto:info@communitiesforgenerations.org" class="btn btn-ghost">Get Updates →</a>
+    </div>
+  </section>
+
+  <!-- FOOT -->
+  <div class="foot">
+    <span>4th Annual CED Summit · Est. 2023</span>
+    <span>#CEDSummit2026 · #BWSFest2026</span>
+  </div>
+
+</div>
+
+</body>
+</html>

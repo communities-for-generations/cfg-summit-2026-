@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sponsorship — 4th Annual CED Summit · Aug 2026</title>
+<meta name="description" content="Sponsorship opportunities for the 4th Annual Community Economic Development Summit. August 2026. Presented by Communities for Generations, Inc.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Fraunces:ital,wght@0,400;0,600;0,800;1,400&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bone: #F4EFE6;
+    --bone-deep: #EAE3D5;
+    --ink: #14110F;
+    --ink-soft: #2A2522;
+    --rust: #D2461E;
+    --rust-deep: #A8351A;
+    --grid: rgba(20, 17, 15, 0.08);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bone);
+    color: var(--ink);
+    font-family: 'Fraunces', Georgia, serif;
+    font-size: 17px;
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image:
+      linear-gradient(to right, var(--grid) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+    background-size: 80px 80px;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.18'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 1;
+    mix-blend-mode: multiply;
+    opacity: 0.4;
+  }
+
+  .wrap {
+    position: relative;
+    z-index: 2;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 36px clamp(20px, 4vw, 56px);
+  }
+
+  /* HEADER STRIP */
+  .strip {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 16px;
+    margin-bottom: clamp(40px, 8vh, 90px);
+  }
+
+  .strip .left { display: flex; gap: 24px; flex-wrap: wrap; }
+  .strip .right { display: flex; gap: 18px; align-items: center; }
+  .strip .dot {
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: var(--rust);
+    display: inline-block;
+    margin-right: 8px;
+    animation: pulse 2.4s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.5; transform: scale(1.3); }
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    margin-bottom: clamp(60px, 10vh, 120px);
+  }
+
+  .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--rust);
+    margin-bottom: 28px;
+    display: inline-block;
+    border-left: 3px solid var(--rust);
+    padding-left: 12px;
+    line-height: 1.3;
+  }
+
+  .title {
+    font-family: 'Anton', 'Impact', sans-serif;
+    font-weight: 400;
+    font-size: clamp(64px, 13vw, 200px);
+    line-height: 0.85;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .title .hollow {
+    display: block;
+    -webkit-text-stroke: 2px var(--ink);
+    color: transparent;
+  }
+
+  .title .accent {
+    color: var(--rust);
+  }
+
+  .subtitle {
+    font-family: 'Fraunces', serif;
+    font-weight: 400;
+    font-style: italic;
+    font-size: clamp(18px, 2.4vw, 28px);
+    line-height: 1.35;
+    margin-top: clamp(24px, 4vh, 48px);
+    max-width: 740px;
+    color: var(--ink-soft);
+  }
+
+  .subtitle em {
+    font-style: normal;
+    font-weight: 800;
+    color: var(--ink);
+    border-bottom: 2px solid var(--rust);
+    padding-bottom: 2px;
+  }
+
+  /* MISSION BLOCK */
+  .mission {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 28px;
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: clamp(36px, 6vh, 60px) 0;
+    margin-bottom: clamp(60px, 10vh, 120px);
+  }
+
+  .mission-label {
+    grid-column: span 12;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .mission-label .swatch {
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--rust);
+  }
+
+  .mission-body {
+    grid-column: span 12;
+    font-family: 'Fraunces', serif;
+    font-size: clamp(20px, 2.6vw, 30px);
+    line-height: 1.4;
+    color: var(--ink);
+  }
+  @media (min-width: 900px) { .mission-body { grid-column: span 9; } }
+
+  .mission-body strong {
+    font-weight: 800;
+    border-bottom: 2px solid var(--rust);
+  }
+
+  .mission-stats {
+    grid-column: span 12;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    border: 1px solid var(--ink);
+    margin-top: 8px;
+  }
+  @media (max-width: 600px) { .mission-stats { grid-template-columns: 1fr; } }
+
+  .stat {
+    padding: 24px 20px;
+    border-right: 1px solid var(--ink);
+  }
+  .stat:last-child { border-right: none; }
+  @media (max-width: 600px) {
+    .stat { border-right: none; border-bottom: 1px solid var(--ink); }
+    .stat:last-child { border-bottom: none; }
+  }
+
+  .stat .snum {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(36px, 4.5vw, 56px);
+    line-height: 0.9;
+    color: var(--rust);
+    margin-bottom: 8px;
+  }
+
+  .stat .sdesc {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+  }
+
+  /* TIERS SECTION */
+  .tiers-header {
+    margin-bottom: clamp(36px, 5vh, 56px);
+  }
+
+  .section-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .section-label .swatch {
+    display: inline-block;
+    width: 24px;
+    height: 1px;
+    background: var(--rust);
+  }
+
+  .tiers-headline {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(40px, 6.5vw, 88px);
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+  }
+
+  .tiers-headline .arrow {
+    color: var(--rust);
+    margin: 0 0.1em;
+  }
+
+  /* TIER CARDS */
+  .tier {
+    border: 1px solid var(--ink);
+    margin-bottom: 2px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.3s ease;
+  }
+
+  .tier:hover { background: var(--bone-deep); }
+
+  .tier.featured {
+    background: var(--ink);
+    color: var(--bone);
+  }
+
+  .tier.featured:hover { background: var(--ink-soft); }
+
+  .tier-inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  @media (min-width: 900px) {
+    .tier-inner {
+      grid-template-columns: 280px 1fr auto;
+      align-items: stretch;
+    }
+  }
+
+  .tier-left {
+    padding: clamp(28px, 4vw, 44px);
+    border-bottom: 1px solid var(--ink);
+  }
+  @media (min-width: 900px) {
+    .tier-left {
+      border-bottom: none;
+      border-right: 1px solid var(--ink);
+    }
+  }
+
+  .tier.featured .tier-left {
+    border-color: rgba(244, 239, 230, 0.2);
+  }
+
+  .tier-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.2em;
+    color: var(--rust);
+    margin-bottom: 16px;
+    display: block;
+  }
+
+  .tier.featured .tier-num { color: var(--rust); }
+
+  .tier-name {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(32px, 3.5vw, 48px);
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 12px;
+  }
+
+  .tier-tagline {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--ink-soft);
+    line-height: 1.4;
+  }
+
+  .tier.featured .tier-tagline { color: rgba(244, 239, 230, 0.65); }
+
+  .tier-price {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(44px, 5vw, 68px);
+    line-height: 0.9;
+    color: var(--rust);
+    margin-top: 24px;
+    display: block;
+  }
+
+  .tier-middle {
+    padding: clamp(28px, 4vw, 44px);
+  }
+
+  .tier-perks-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: var(--ink-soft);
+    margin-bottom: 20px;
+    display: block;
+  }
+
+  .tier.featured .tier-perks-label { color: rgba(244, 239, 230, 0.5); }
+
+  .perks {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  @media (min-width: 600px) {
+    .perks { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .perk {
+    font-family: 'Fraunces', serif;
+    font-size: 15px;
+    line-height: 1.35;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .perk::before {
+    content: '→';
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--rust);
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .tier-right {
+    padding: clamp(28px, 4vw, 44px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-top: 1px solid var(--ink);
+    min-width: 180px;
+  }
+  @media (min-width: 900px) {
+    .tier-right {
+      border-top: none;
+      border-left: 1px solid var(--ink);
+      align-items: center;
+      text-align: center;
+    }
+  }
+
+  .tier.featured .tier-right { border-color: rgba(244, 239, 230, 0.2); }
+
+  .btn {
+    display: inline-block;
+    padding: 16px 28px;
+    background: var(--rust);
+    color: var(--bone);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    text-decoration: none;
+    border: 2px solid var(--rust);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .btn:hover {
+    background: var(--ink);
+    border-color: var(--ink);
+    color: var(--bone);
+  }
+
+  .tier.featured .btn {
+    background: var(--bone);
+    color: var(--ink);
+    border-color: var(--bone);
+  }
+
+  .tier.featured .btn:hover {
+    background: var(--rust);
+    color: var(--bone);
+    border-color: var(--rust);
+  }
+
+  .btn-ghost {
+    background: transparent;
+    color: var(--ink);
+    border: 2px solid var(--ink);
+    margin-top: 10px;
+  }
+  .btn-ghost:hover {
+    background: var(--ink);
+    color: var(--bone);
+  }
+
+  .seats-note {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+    margin-top: 12px;
+    display: block;
+  }
+
+  .tier.featured .seats-note { color: rgba(244, 239, 230, 0.5); }
+
+  /* MARQUEE */
+  .marquee {
+    border-top: 1px solid var(--ink);
+    border-bottom: 1px solid var(--ink);
+    padding: 22px 0;
+    overflow: hidden;
+    margin: clamp(48px, 8vh, 96px) 0;
+    background: var(--ink);
+    color: var(--bone);
+  }
+
+  .marquee-track {
+    display: flex;
+    gap: 60px;
+    white-space: nowrap;
+    animation: scroll 40s linear infinite;
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(28px, 4vw, 48px);
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .marquee-track span { display: inline-block; }
+  .marquee-track .accent { color: var(--rust); }
+  .marquee-track .star { color: var(--rust); margin: 0 12px; }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  /* IN-KIND */
+  .inkind {
+    border: 1px solid var(--ink);
+    padding: clamp(32px, 5vw, 56px);
+    margin-bottom: 2px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    align-items: center;
+  }
+  @media (min-width: 760px) {
+    .inkind { grid-template-columns: 1fr auto; }
+  }
+
+  .inkind-text h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(32px, 4vw, 56px);
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+
+  .inkind-text p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 560px;
+    line-height: 1.5;
+  }
+
+  /* CONTACT */
+  .contact {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 28px;
+    padding: clamp(40px, 6vh, 60px) 0;
+    border-top: 1px solid var(--ink);
+    align-items: end;
+  }
+
+  .contact-text {
+    grid-column: span 12;
+  }
+  @media (min-width: 760px) { .contact-text { grid-column: span 7; } }
+
+  .contact-text h3 {
+    font-family: 'Anton', sans-serif;
+    font-size: clamp(36px, 5.5vw, 68px);
+    line-height: 0.95;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 16px;
+  }
+
+  .contact-text p {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink-soft);
+    max-width: 480px;
+  }
+
+  .contact-action {
+    grid-column: span 12;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  @media (min-width: 760px) { .contact-action { grid-column: span 5; align-items: flex-end; } }
+
+  /* FOOT */
+  .foot {
+    border-top: 1px solid var(--ink);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--ink-soft);
+    margin-top: clamp(40px, 6vh, 60px);
+  }
+
+  /* ANIMATIONS */
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal { animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both; }
+  .d1 { animation-delay: 0.1s; }
+  .d2 { animation-delay: 0.25s; }
+  .d3 { animation-delay: 0.4s; }
+  .d4 { animation-delay: 0.55s; }
+  .d5 { animation-delay: 0.7s; }
+
+  @media (max-width: 600px) {
+    .strip .left .hide-sm { display: none; }
+    .marquee-track { gap: 30px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <!-- PRESENTED BY HEADER -->
+  <div style="text-align:center; padding: clamp(20px,3vw,36px) 0 clamp(16px,2vw,24px); border-bottom: 1px solid var(--ink); margin-bottom: clamp(20px,3vh,36px);" class="reveal d1">
+    <div style="font-family:'JetBrains Mono',monospace; font-size:10px; text-transform:uppercase; letter-spacing:0.22em; color:var(--ink-soft); margin-bottom:10px;">Presented by</div>
+    <div style="font-family:'Fraunces',serif; font-size:clamp(14px,1.6vw,20px); font-weight:800; color:var(--ink); line-height:1.3;">Communities for Generations, Inc. + BWS Festival</div>
+    <div style="font-family:'Fraunces',serif; font-size:clamp(13px,1.3vw,16px); font-style:italic; color:var(--ink-soft); margin-top:6px;">Powered by The Elements of Abundance</div>
+  </div>
+
+  <!-- HEADER STRIP -->
+  <div class="strip reveal d1">
+    <div class="left">
+      <span><span class="dot"></span>Sponsorship</span>
+      <span class="hide-sm">CFG · Elements of Abundance · BWS Fest</span>
+    </div>
+    <div class="right">
+      <span>August 2026 · New Haven, CT</span>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="label reveal d2">4th Annual Community<br>Economic Development Summit</span>
+
+    <h1 class="title">
+      <span class="reveal d2">Invest</span>
+      <span class="accent reveal d3">In</span>
+      <span class="hollow reveal d4">This.</span>
+    </h1>
+
+    <p class="subtitle reveal d5">
+      Your investment makes this summit <em>free for the community</em> — and puts your organization at the center of New Haven's most important conversation on civic power, economic ownership, and collective futures.
+    </p>
+  </section>
+
+  <!-- MISSION BLOCK -->
+  <section class="mission reveal d5">
+    <div class="mission-label">
+      <span class="swatch"></span>Why Sponsor
+    </div>
+    <p class="mission-body">
+      The <strong>CED Summit</strong> brings together youth, elders, entrepreneurs, creatives, and civic leaders for a free, community-centered experience. Sponsorship is how we keep it free — and how you become part of the legacy.
+    </p>
+    <div class="mission-stats">
+      <div class="stat">
+        <div class="snum">4th</div>
+        <div class="sdesc">Annual Summit<br>Est. 2023</div>
+      </div>
+      <div class="stat">
+        <div class="snum">Free</div>
+        <div class="sdesc">To attend<br>Community-centered</div>
+      </div>
+      <div class="stat">
+        <div class="snum">All</div>
+        <div class="sdesc">Ages welcome<br>Inter-generational</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIERS HEADER -->
+  <div class="tiers-header">
+    <div class="section-label">
+      <span class="swatch"></span>Sponsorship Tiers
+    </div>
+    <h2 class="tiers-headline">
+      Choose Your <span class="arrow">→</span> Level.
+    </h2>
+  </div>
+
+  <!-- TIER 1: LEGACY — FEATURED -->
+  <div class="tier featured">
+    <div class="tier-inner">
+      <div class="tier-left">
+        <span class="tier-num">Tier 01 / Legacy</span>
+        <div class="tier-name">Legacy<br>Sponsor</div>
+        <div class="tier-tagline">Empower Community Ownership &amp; Legacy-Building</div>
+        <span class="tier-price">$10K+</span>
+      </div>
+      <div class="tier-middle">
+        <span class="tier-perks-label">What's included</span>
+        <ul class="perks">
+          <li class="perk">Listed as Presenting Sponsor in all media, press &amp; promotional materials</li>
+          <li class="perk">Speaking opportunity during the Summit Welcome</li>
+          <li class="perk">(1) Community Scholarship in your name for a SAGE Civic Institute course</li>
+          <li class="perk">(1) Sponsored Community Wellbeing Activation (healing circle, acupuncture, etc.)</li>
+          <li class="perk">Premier logo placement on signage, stage backdrop &amp; digital assets</li>
+          <li class="perk">Full-page ad in digital program + dedicated social media spotlight</li>
+        </ul>
+      </div>
+      <div class="tier-right">
+        <a href="https://buy.stripe.com/28E8wPb4t8fEgQC8iucfK06" target="_blank" class="btn">Become a Sponsor →</a>
+        <span class="seats-note">Reserved seating for 6</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 2: BUILDER -->
+  <div class="tier">
+    <div class="tier-inner">
+      <div class="tier-left">
+        <span class="tier-num">Tier 02 / Builder</span>
+        <div class="tier-name">Builder<br>Sponsor</div>
+        <div class="tier-tagline">Invest in Black-Led Innovation &amp; Strategic Action</div>
+        <span class="tier-price">$5,000</span>
+      </div>
+      <div class="tier-middle">
+        <span class="tier-perks-label">What's included</span>
+        <ul class="perks">
+          <li class="perk">Recognition during Awards Ceremony</li>
+          <li class="perk">(1) Community Scholarship or Wellbeing Activation in your name</li>
+          <li class="perk">Half-page ad in digital program</li>
+          <li class="perk">Logo placement on event promo materials, signage &amp; digital program</li>
+          <li class="perk">Grouped social media feature</li>
+        </ul>
+      </div>
+      <div class="tier-right">
+        <a href="https://buy.stripe.com/bJeeVd7Sh3ZocAm7eqcfK07" target="_blank" class="btn">Become a Sponsor →</a>
+        <span class="seats-note">Reserved seating for 4</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 3: VOICE -->
+  <div class="tier">
+    <div class="tier-inner">
+      <div class="tier-left">
+        <span class="tier-num">Tier 03 / Voice</span>
+        <div class="tier-name">Voice<br>Sponsor</div>
+        <div class="tier-tagline">Center Youth, Civic Power and Cultural Leadership</div>
+        <span class="tier-price">$2,500</span>
+      </div>
+      <div class="tier-middle">
+        <span class="tier-perks-label">What's included</span>
+        <ul class="perks">
+          <li class="perk">Recognition during panel or Strategy Lab of your choice</li>
+          <li class="perk">Logo placement on event promo materials, signage &amp; social media posts</li>
+          <li class="perk">Quarter-page ad in digital program</li>
+          <li class="perk">(1) Community member sponsored for civic literacy training</li>
+        </ul>
+      </div>
+      <div class="tier-right">
+        <a href="https://buy.stripe.com/5kQ14n6OdbrQ6bY7eqcfK08" target="_blank" class="btn">Become a Sponsor →</a>
+        <span class="seats-note">Reserved seating for 2</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 4: ROOTS -->
+  <div class="tier">
+    <div class="tier-inner">
+      <div class="tier-left">
+        <span class="tier-num">Tier 04 / Roots</span>
+        <div class="tier-name">Roots<br>Sponsor</div>
+        <div class="tier-tagline">Nourish Our Community — Mind, Body and Economy</div>
+        <span class="tier-price">$1,000</span>
+      </div>
+      <div class="tier-middle">
+        <span class="tier-perks-label">What's included</span>
+        <ul class="perks">
+          <li class="perk">Name listed in event program and on signage</li>
+          <li class="perk">Recognition during Wellness or Civic Activation programming</li>
+          <li class="perk">Helps cover meals, materials and participation kits</li>
+        </ul>
+      </div>
+      <div class="tier-right">
+        <a href="https://buy.stripe.com/dRm4gz6OdeE28k60Q2cfK09" target="_blank" class="btn">Become a Sponsor →</a>
+        <span class="seats-note">Reserved seating for 1</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- TIER 5: CONTRIBUTOR -->
+  <div class="tier">
+    <div class="tier-inner">
+      <div class="tier-left">
+        <span class="tier-num">Tier 05 / Community</span>
+        <div class="tier-name">Community<br>Contributor</div>
+        <div class="tier-tagline">Support Grassroots Power from the Ground Up</div>
+        <span class="tier-price">$500</span>
+      </div>
+      <div class="tier-middle">
+        <span class="tier-perks-label">What's included</span>
+        <ul class="perks">
+          <li class="perk">Name listed in digital program</li>
+          <li class="perk">Contributes toward meals, wellness tools or educational materials</li>
+        </ul>
+      </div>
+      <div class="tier-right">
+        <a href="https://buy.stripe.com/8x29AT1tT1Rg2ZMdCOcfK0a" target="_blank" class="btn">Become a Sponsor →</a>
+        <span class="seats-note">Reserved seating for 1</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- MARQUEE -->
+  <div class="marquee">
+    <div class="marquee-track">
+      <span>Legacy</span><span class="star">✦</span>
+      <span class="accent">Builder</span><span class="star">✦</span>
+      <span>Voice</span><span class="star">✦</span>
+      <span class="accent">Roots</span><span class="star">✦</span>
+      <span>Community</span><span class="star">✦</span>
+      <span class="accent">Invest in This</span><span class="star">✦</span>
+      <span>August 2026</span><span class="star">✦</span>
+      <span class="accent">New Haven</span><span class="star">✦</span>
+      <span>Legacy</span><span class="star">✦</span>
+      <span class="accent">Builder</span><span class="star">✦</span>
+      <span>Voice</span><span class="star">✦</span>
+      <span class="accent">Roots</span><span class="star">✦</span>
+      <span>Community</span><span class="star">✦</span>
+      <span class="accent">Invest in This</span><span class="star">✦</span>
+      <span>August 2026</span><span class="star">✦</span>
+      <span class="accent">New Haven</span><span class="star">✦</span>
+    </div>
+  </div>
+
+  <!-- IN-KIND -->
+  <div class="inkind">
+    <div class="inkind-text">
+      <h3>In-Kind &amp;<br>Custom Partnerships</h3>
+      <p>Media, food, printing, healing services — we welcome aligned partnerships. We'll design a custom package that reflects your organization's values and vision.</p>
+    </div>
+    <a href="https://calendly.com/theelements/30min" target="_blank" class="btn">Let's Talk →</a>
+  </div>
+
+  <!-- CONTACT CTA -->
+  <section class="contact">
+    <div class="contact-text">
+      <h3>Ready to<br>Invest?</h3>
+      <p>Reach out to discuss your sponsorship level, customize your package, or get the full prospectus.</p>
+    </div>
+    <div class="contact-action">
+      <a href="mailto:info@theelements.world?subject=CED Summit Sponsorship" class="btn">Contact Us →</a>
+    </div>
+  </section>
+
+  <!-- FOOT -->
+  <div class="foot">
+    <span>4th Annual CED Summit · Est. 2023 · Communities for Generations, Inc. a 501(c)(3) · Powered by The Elements of Abundance</span>
+    <span>#FurtherTogether · #CEDSummit2026</span>
+  </div>
+
+</div>
+
+</body>
+</html>

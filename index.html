@@ -20,10 +20,8 @@
     --rust-deep: #A8351A;
     --grid: rgba(20, 17, 15, 0.08);
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
   html { scroll-behavior: smooth; }
-
   body {
     background: var(--bone);
     color: var(--ink);
@@ -33,7 +31,6 @@
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
   }
-
   /* Visible framework grid */
   body::before {
     content: '';
@@ -46,7 +43,6 @@
     pointer-events: none;
     z-index: 0;
   }
-
   /* Grain overlay */
   body::after {
     content: '';
@@ -58,7 +54,6 @@
     mix-blend-mode: multiply;
     opacity: 0.4;
   }
-
   .wrap {
     position: relative;
     z-index: 2;
@@ -66,7 +61,6 @@
     margin: 0 auto;
     padding: 36px clamp(20px, 4vw, 56px);
   }
-
   /* ========== HEADER STRIP ========== */
   .strip {
     display: flex;
@@ -91,11 +85,22 @@
     margin-right: 8px;
     animation: pulse 2.4s ease-in-out infinite;
   }
+  .strip-link {
+    color: var(--rust);
+    text-decoration: none;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    border-bottom: 1px solid var(--rust);
+    padding-bottom: 1px;
+    transition: opacity 0.2s ease;
+  }
+  .strip-link:hover { opacity: 0.7; }
   @keyframes pulse {
     0%, 100% { opacity: 1; transform: scale(1); }
     50% { opacity: 0.5; transform: scale(1.3); }
   }
-
   /* ========== PRESENTED BY MASTHEAD ========== */
   .presented {
     display: grid;
@@ -107,7 +112,6 @@
     border-bottom: 1px solid var(--ink);
     margin-bottom: clamp(40px, 6vh, 72px);
   }
-
   .presented-label {
     font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
@@ -119,7 +123,6 @@
     padding-right: clamp(16px, 2vw, 28px);
     border-right: 1px solid var(--ink);
   }
-
   .presented-orgs {
     display: flex;
     flex-wrap: wrap;
@@ -132,12 +135,8 @@
     letter-spacing: 0.005em;
     color: var(--ink);
   }
-  .presented-orgs .org {
-    display: inline-block;
-  }
-  .presented-orgs .org--accent {
-    color: var(--rust);
-  }
+  .presented-orgs .org { display: inline-block; }
+  .presented-orgs .org--accent { color: var(--rust); }
   .presented-orgs .org-sep {
     color: var(--ink-faint);
     font-family: 'Fraunces', serif;
@@ -149,7 +148,6 @@
     font-size: 0.92em;
     margin: 0 0.1em;
   }
-
   @media (max-width: 720px) {
     .presented { grid-template-columns: 1fr; gap: 14px; }
     .presented-label {
@@ -160,13 +158,11 @@
     }
     .presented-orgs { font-size: 16px; }
   }
-
   /* ========== HERO ========== */
   .hero {
     position: relative;
     margin-bottom: clamp(48px, 8vh, 96px);
   }
-
   .label {
     font-family: 'JetBrains Mono', monospace;
     font-size: 12px;
@@ -179,7 +175,6 @@
     padding-left: 12px;
     line-height: 1.3;
   }
-
   .title {
     font-family: 'Anton', 'Impact', sans-serif;
     font-weight: 400;
@@ -212,7 +207,6 @@
     margin: 0 0.05em;
     vertical-align: 0.05em;
   }
-
   .subtitle {
     font-family: 'Fraunces', serif;
     font-weight: 400;
@@ -230,7 +224,6 @@
     border-bottom: 2px solid var(--rust);
     padding-bottom: 2px;
   }
-
   /* ========== DETAILS BLOCK ========== */
   .details {
     display: grid;
@@ -280,8 +273,7 @@
     margin-top: 8px;
     line-height: 1.4;
   }
-
-  /* ========== INVITATION COPY (above survey) ========== */
+  /* ========== INVITATION COPY ========== */
   .invitation {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -289,7 +281,6 @@
     margin-bottom: clamp(40px, 6vh, 72px);
     align-items: start;
   }
-
   .inv-label {
     grid-column: span 12;
     font-family: 'JetBrains Mono', monospace;
@@ -307,7 +298,6 @@
     vertical-align: middle;
     margin-right: 12px;
   }
-
   .inv-headline {
     grid-column: span 12;
     font-family: 'Anton', sans-serif;
@@ -318,7 +308,6 @@
     margin-bottom: clamp(28px, 4vh, 44px);
   }
   .inv-headline .accent { color: var(--rust); }
-
   .inv-body {
     grid-column: span 12;
     display: grid;
@@ -329,17 +318,13 @@
   @media (min-width: 900px) {
     .inv-body { grid-column: 1 / span 10; }
   }
-
   .inv-body p {
     font-family: 'Fraunces', serif;
     font-size: clamp(17px, 1.5vw, 21px);
     line-height: 1.55;
     color: var(--ink);
   }
-  .inv-body p .lead {
-    font-weight: 600;
-    color: var(--ink);
-  }
+  .inv-body p .lead { font-weight: 600; color: var(--ink); }
   .inv-body p .em {
     font-weight: 800;
     border-bottom: 2px solid var(--rust);
@@ -364,25 +349,19 @@
     font-weight: 700;
     margin-top: 8px;
   }
-  .inv-deadline::before {
-    content: '↓ ';
-    margin-right: 4px;
-  }
-
+  .inv-deadline::before { content: '↓ '; margin-right: 4px; }
   /* ========== SURVEY ANCHOR ========== */
   .survey-anchor {
     border-top: 1px solid var(--ink);
     padding-top: clamp(36px, 5vh, 56px);
     margin-bottom: clamp(48px, 7vh, 80px);
   }
-
   .survey-head {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 28px;
     margin-bottom: clamp(28px, 4vh, 40px);
   }
-
   .survey-head .lab {
     grid-column: span 12;
     font-family: 'JetBrains Mono', monospace;
@@ -393,7 +372,6 @@
     font-weight: 700;
     margin-bottom: 4px;
   }
-
   .survey-head .h {
     grid-column: span 12;
     font-family: 'Anton', sans-serif;
@@ -405,7 +383,6 @@
   @media (min-width: 760px) {
     .survey-head .h { grid-column: span 8; }
   }
-
   .survey-head .meta {
     grid-column: span 12;
     font-family: 'Fraunces', serif;
@@ -418,7 +395,6 @@
   @media (min-width: 760px) {
     .survey-head .meta { grid-column: span 4; text-align: right; }
   }
-
   .survey-frame {
     background: var(--bone-deep);
     border: 1px solid var(--ink);
@@ -432,73 +408,18 @@
     inset: 8px;
     border: 1px dashed var(--ink-faint);
     pointer-events: none;
-  } 
+  }
   .survey-frame--live {
-  padding: clamp(20px, 3vh, 32px) clamp(12px, 2vw, 24px);
-  text-align: left;
-}
-.survey-frame--live::before {
-  display: none;
-}
-.survey-frame--live iframe {
-  background: transparent;
-  width: 100%;
-  border: 0;
-  display: block;
-}
-  .survey-placeholder-label {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.22em;
-    color: var(--ink-faint);
-    margin-bottom: 20px;
+    padding: clamp(20px, 3vh, 32px) clamp(12px, 2vw, 24px);
+    text-align: left;
   }
-  .survey-placeholder-h {
-    font-family: 'Anton', sans-serif;
-    font-size: clamp(24px, 3vw, 34px);
-    line-height: 1.05;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-    color: var(--ink);
+  .survey-frame--live::before { display: none; }
+  .survey-frame--live iframe {
+    background: transparent;
+    width: 100%;
+    border: 0;
+    display: block;
   }
-  .survey-placeholder-p {
-    font-family: 'Fraunces', serif;
-    font-size: 15px;
-    font-style: italic;
-    color: var(--ink-soft);
-    max-width: 520px;
-    margin: 0 auto 24px;
-    line-height: 1.5;
-  }
-  .survey-cta {
-    display: inline-block;
-    padding: 18px 32px;
-    background: var(--rust);
-    color: var(--bone);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    text-decoration: none;
-    border: 2px solid var(--rust);
-    transition: all 0.2s ease;
-    cursor: pointer;
-  }
-  .survey-cta:hover {
-    background: var(--ink);
-    border-color: var(--ink);
-  }
-  .survey-time {
-    margin-top: 16px;
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 0.18em;
-    color: var(--ink-faint);
-  }
-
   /* ========== MARQUEE ========== */
   .marquee {
     border-top: 1px solid var(--ink);
@@ -526,7 +447,6 @@
     0% { transform: translateX(0); }
     100% { transform: translateX(-50%); }
   }
-
   /* ========== PARTNERSHIP ========== */
   .partners {
     display: grid;
@@ -545,7 +465,6 @@
     margin-bottom: 8px;
   }
   @media (min-width: 760px) { .partners .lab { grid-column: span 4; } }
-
   .partners .list {
     grid-column: span 12;
     font-family: 'Fraunces', serif;
@@ -554,12 +473,10 @@
     color: var(--ink);
   }
   @media (min-width: 760px) { .partners .list { grid-column: span 8; } }
-
   .partners .list strong {
     font-weight: 800;
     border-bottom: 2px solid var(--rust);
   }
-
   /* ========== CTA ========== */
   .cta {
     display: grid;
@@ -595,7 +512,6 @@
     gap: 12px;
   }
   @media (min-width: 760px) { .cta-action { grid-column: span 5; align-items: flex-end; } }
-
   .btn {
     display: inline-block;
     padding: 16px 28px;
@@ -611,14 +527,9 @@
     transition: all 0.2s ease;
     cursor: pointer;
   }
-  .btn:hover {
-    background: var(--ink);
-    border-color: var(--ink);
-    color: var(--bone);
-  }
+  .btn:hover { background: var(--ink); border-color: var(--ink); color: var(--bone); }
   .btn-ghost { background: transparent; color: var(--ink); border: 2px solid var(--ink); }
   .btn-ghost:hover { background: var(--ink); color: var(--bone); }
-
   /* ========== FOOT ========== */
   .foot {
     border-top: 1px solid var(--ink);
@@ -633,7 +544,6 @@
     letter-spacing: 0.18em;
     color: var(--ink-soft);
   }
-
   /* Stagger reveal */
   @keyframes rise {
     from { opacity: 0; transform: translateY(20px); }
@@ -646,7 +556,6 @@
   .d4 { animation-delay: 0.46s; }
   .d5 { animation-delay: 0.6s; }
   .d6 { animation-delay: 0.72s; }
-
   @media (max-width: 600px) {
     .strip .left .hide-sm { display: none; }
     .marquee-track { gap: 30px; }
@@ -654,9 +563,7 @@
 </style>
 </head>
 <body>
-
 <div class="wrap">
-
   <!-- HEADER STRIP -->
   <div class="strip reveal d1">
     <div class="left">
@@ -664,10 +571,10 @@
       <span class="hide-sm">Thursday · August 13 · 2026</span>
     </div>
     <div class="right">
+      <a href="sponsorship.html" class="strip-link">Become a Sponsor →</a>
       <span>New Haven, CT</span>
     </div>
   </div>
-
   <!-- PRESENTED BY MASTHEAD -->
   <div class="presented reveal d2">
     <div class="presented-label">
@@ -681,22 +588,18 @@
       <span class="org org--accent">BWS Fest</span>
     </div>
   </div>
-
   <!-- HERO -->
   <section class="hero">
     <span class="label reveal d2">4th Annual Community<br>Economic Development Summit</span>
-
     <h1 class="title">
       <span class="row1 reveal d3">CED Summit</span>
       <span class="row2 reveal d4">2026</span>
       <span class="row3 reveal d5">New Haven</span>
     </h1>
-
     <p class="subtitle reveal d6">
       Last August we packed the theater at SCSU. This year we come back <em>bigger</em>, alongside the 5th Annual Black Wall Street Festival — and this time, the work doesn't end when the room clears.
     </p>
   </section>
-
   <!-- DETAILS -->
   <section class="details">
     <div class="detail">
@@ -706,7 +609,6 @@
         <span class="sm">Thursday evening</span>
       </div>
     </div>
-
     <div class="detail">
       <span class="num">02 / Venue</span>
       <div class="val">
@@ -714,7 +616,6 @@
         <span class="sm">Venue announcement coming soon</span>
       </div>
     </div>
-
     <div class="detail">
       <span class="num">03 / Format</span>
       <div class="val">
@@ -722,7 +623,6 @@
         <span class="sm">Evening program · Dinner served</span>
       </div>
     </div>
-
     <div class="detail">
       <span class="num">04 / Open To</span>
       <div class="val">
@@ -731,17 +631,14 @@
       </div>
     </div>
   </section>
-
   <!-- INVITATION + LEAD COPY -->
   <section class="invitation">
     <div class="inv-label">
       <span class="swatch"></span>An Invitation
     </div>
-
     <h2 class="inv-headline">
       Help shape what <span class="accent">we build</span> together.
     </h2>
-
     <div class="inv-body">
       <p>
         Last August, we packed the theater. More than <span class="num">150</span> of us came together for the 3rd Annual Community Economic Development Summit. We talked about wealth, identity, and power. We named the audacity it takes to build what our community deserves. The room reached capacity, and the conversations haven't stopped since the room cleared.
@@ -757,7 +654,6 @@
       </p>
     </div>
   </section>
-
   <!-- SURVEY ANCHOR -->
   <section class="survey-anchor" id="survey">
     <div class="survey-head">
@@ -765,13 +661,11 @@
       <h3 class="h">Tell us what to build.</h3>
       <p class="meta">8 questions.<br>About 3 minutes.</p>
     </div>
-
     <div class="survey-frame survey-frame--live">
-  <iframe data-tally-src="https://tally.so/embed/68rjZo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="2448" frameborder="0" marginheight="0" marginwidth="0" title="4th Annual CED Summit × BWS Fest — Community Survey"></iframe>
-<script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
+      <iframe data-tally-src="https://tally.so/embed/68rjZo?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1" loading="lazy" width="100%" height="2448" frameborder="0" marginheight="0" marginwidth="0" title="4th Annual CED Summit × BWS Fest — Community Survey"></iframe>
+      <script>var d=document,w="https://tally.so/widgets/embed.js",v=function(){"undefined"!=typeof Tally?Tally.loadEmbeds():d.querySelectorAll("iframe[data-tally-src]:not([src])").forEach((function(e){e.src=e.dataset.tallySrc}))};if("undefined"!=typeof Tally)v();else if(d.querySelector('script[src="'+w+'"]')==null){var s=d.createElement("script");s.src=w,s.onload=v,s.onerror=v,d.body.appendChild(s);}</script>
     </div>
   </section>
-
   <!-- MARQUEE -->
   <div class="marquee">
     <div class="marquee-track">
@@ -787,7 +681,6 @@
       <span class="accent">New Haven</span><span class="star">✦</span>
     </div>
   </div>
-
   <!-- PARTNERSHIP -->
   <section class="partners">
     <div class="lab">Presented in partnership</div>
@@ -795,7 +688,6 @@
       <strong>Communities for Generations, Inc.</strong> · <strong>The Elements of Abundance</strong> · <strong>Black Wall Street Festival</strong> — together for the second year, building civic infrastructure for our community's reemergence.
     </div>
   </section>
-
   <!-- CTA -->
   <section class="cta">
     <div class="cta-text">
@@ -807,14 +699,11 @@
       <a href="https://communities-for-generation-inc-the-elements-of-abundance-atm9kw.subscribepage.io/#Standard-hero" class="btn btn-ghost" target="_blank" rel="noopener">Get Updates →</a>
     </div>
   </section>
-
   <!-- FOOT -->
   <div class="foot">
     <span>4th Annual CED Summit · Est. 2023</span>
     <span>#CEDSummit2026 · #BWSFest2026</span>
   </div>
-
 </div>
-
 </body>
 </html>
